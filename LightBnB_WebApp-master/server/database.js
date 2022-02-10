@@ -1,5 +1,19 @@
 const properties = require('./json/properties.json');
 const users = require('./json/users.json');
+const { Pool } = require('pg');
+
+const pool = new Pool({
+  user: 'vagrant',
+  password: '123',
+  host: 'localhost',
+  database: 'bootcampx'
+});
+
+// pool.query()
+//   .then(res => {
+//     console.log(res);
+//   })
+//   .catch(err => console.error('query error', err.stack));
 
 /// Users
 
